@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+{% if messages %}
+<div class="container">
+    {% for m in messages %}
+    <div class="alert alert-{{m.tags}}">
+        <button class="close" data-dismiss="alert"></button>
+        <strong>{{m}}</strong>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+<!-- Hero Area Start -->
+{% include 'hero.html' %}
+<!-- Hero Area End -->
+
+<!-- Services Section Start -->
+{% include 'services.html' %}
+<!-- Services Section End -->
+
+<!-- About Section start -->
+{% include 'about.html' %}
+<!-- About Section End -->
+
+<!-- Features Section Start -->
+{% include 'features.html' %}
+<!-- Features Section End -->
+
+<!-- Team Section Start -->
+{% include 'team.html' %}
+<!-- Team Section End -->
+
+<!-- Pricing section Start -->
+{% include "pricing.html" %}
+<!-- Pricing Table Section End -->
+
+<!-- Testimonial Section Start -->
+{% include 'testimonial.html' %}
+<!-- Testimonial Section End -->
+
+<!-- Call To Action Section Start -->
+{% include 'call.html' %}
+<!-- Call To Action Section Start -->
+
+<!-- Contact Section Start -->
+{% include 'contact.html' %}
+<!-- Contact Section End -->
+
+{% endblock content %}
