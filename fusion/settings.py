@@ -4,12 +4,10 @@ import os
 import dj_database_url
 from pathlib import Path
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 SECRET_KEY = 'django-insecure-4uzac65h6@9@kv(_%jivk9fa@aez5$w&lg3kz=ccg95x58s=s2'
-
 
 DEBUG = False
 
@@ -59,20 +57,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'fusion.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': "dbtest",
-#         "USER": "myuser",
-#         "PASSWORD": "mypass",
-#         "HOST": "localhost",
-#         "PORT": "5432"
-#     }
-# }
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': "dbtest",
+        "USER": "myuser",
+        "PASSWORD": "mypass",
+        "HOST": "localhost",
+        "PORT": "5432"
+    }
+}
+"""
 
 DATABASES = {
     'default':  dj_database_url.config()
