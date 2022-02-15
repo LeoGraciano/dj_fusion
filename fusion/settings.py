@@ -63,22 +63,22 @@ WSGI_APPLICATION = 'fusion.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "dbtest",
-        "USER": "myuser",
-        "PASSWORD": "mypass",
-        "HOST": "localhost",
-        "PORT": "5432"
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         dj_database_url.config()
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': "dbtest",
+#         "USER": "myuser",
+#         "PASSWORD": "mypass",
+#         "HOST": "localhost",
+#         "PORT": "5432"
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        dj_database_url.config()
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -125,7 +125,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # EMAIL_HOST = "localhost"
 # EMAIL_HOST_USER = "no-replay@fusion.com.br"
