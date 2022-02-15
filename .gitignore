@@ -118,9 +118,9 @@ venv.bak/
 
 
 # Django stuff:
-Only for Development only
-**/migrations/**
-**/migrations
+# Only for Development only
+# **/migrations/**
+# **/migrations
 
 
 ### VisualStudioCode ###
