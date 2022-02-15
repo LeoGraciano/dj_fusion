@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-4uzac65h6@9@kv(_%jivk9fa@aez5$w&lg3kz=ccg95x58s=s2'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -122,12 +122,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-# EMAIL_HOST = "localhost"
-# EMAIL_HOST_USER = "no-replay@fusion.com.br"
-# EMAIL_PORT = 587
-# EMAIL_USE_TSL = True
-# EMAIL_HOST_PASSWORD = "fusion"
-# DEFAULT_FROM_EMAIL = 'contato@fusion.com.br'
+EMAIL_HOST = "localhost"
+EMAIL_HOST_USER = "no-replay@fusion.com.br"
+EMAIL_PORT = 587
+EMAIL_USE_TSL = True
+EMAIL_HOST_PASSWORD = "fusion"
+DEFAULT_FROM_EMAIL = 'contato@fusion.com.br'
 
 
 LOGOUT_REDIRECT_URL = "index"
